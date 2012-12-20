@@ -54,7 +54,7 @@ Cette commande télécharge le dépôt d'exemple, avec plusieurs submodules :
 Étape A-3 facultative : Changer la version que vous voulez utiliser (pour les téméraires)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Le dépôt est configuré pour que lors d'un clone, il pointe vers la dernière version stable (c'est la **master/0.1.4*** au moment de l'écriture de cette page).
+Le dépôt est configuré pour que lors d'un clone, il pointe vers la dernière version stable (c'est la **master/0.1.5*** au moment de l'écriture de cette page).
 
 | Lorsqu'une nouvelle version est disponible, on la créé dans une branche.
 | Pour le moment, tous les dépôts dépendants de novius-os/novius-os sont synchronisés au niveau des numéros de version. C'est-à-dire qu'une application disponible sur notre compte Github suit les mêmes numéros de version que le cœur de Novius OS. Donc si vous utilisez novius-os/core en version 0.3 (qui n'est pas encore sorti !), alors vous devriez aussi utiliser novius-os/app dans le même numéro de version 0.3.
@@ -76,11 +76,11 @@ Méthode B : Depuis un fichier Zip
 ::
 
     cd ~
-    wget http://nova.li/nos-014 -O novius-os.0.1.4.zip
-    unzip novius-os.0.1.4.zip
+    wget http://nova.li/nos-015 -O novius-os.0.1.5.zip
+    unzip novius-os.0.1.5.zip
     sudo mv novius-os /var/www/
 
-Ou téléchargez le fichier `nos-014 <http://nova.li/nos-014>`_ et dézippez avec votre logiciel favori.
+Ou téléchargez le fichier `nos-015 <http://nova.li/nos-015>`_ et dézippez avec votre logiciel favori.
 
 .. _install_server-configuration:
 
