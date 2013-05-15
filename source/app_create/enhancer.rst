@@ -73,32 +73,57 @@ Le contrôleur standard que nous avons étendu prévoit d'être configuré pour 
 Rendez-vous dans le fichier de configuration :file:`mon_appli::config/controller/admin/enhancer.config.php` :
 
 .. code-block:: php
-   :emphasize-lines: 4-9
+   :emphasize-lines: 4-13
 
     <?php
 
     return array(
-        // Configuration de la popup
-        'popup' => array(
-            'layout' => array(
-                'view' => 'mon_appli::enhancer/popup',
+        // Configuration des options de configuration dans la popup
+        'fields' => array(
+            'item_per_page' => array(
+                'label' => __('Item per page:'),
+                'form' => array(
+                    'type' => 'text',
+                    'value' => 10, // This is only the default
+                ),
             ),
         ),
     );
 
-Ce fichier fait référence à la vue ``mon_appli::enhancer/popup`` qui n'existe pas, et qu'il faut donc créer. Cette
-dernière contiendra des champs de formulaire avec nos options configurables :
+La syntaxe des ``fields`` est identique à celle du fichier de configuration du CRUD, avec possibilité de mettre
+des renderers.
 
-.. code-block:: html+php
+Lorsque vous configurez uniquement les ``fields`` et que vous n'avez pas renseigné ``popup.layout``, le contrôleur
+en ajoute un automatiquement pour vous avec cette configuration :
 
-    <h3>Options</h3>
-    <p>
-        <label for="item_per_page"><?= __('Item per page:') ?></label>
-        <input type="text" name="item_per_page" id="item_per_page" value="<?= \Arr::get($enhancer_args, 'item_per_page', 10) ?>" />
-    </p>
+.. code-block:: php
+   :emphasize-lines: 4-16
 
-L'ancienne configuration de l'enhancer est disponible dans la variable ``$enhancer_args`` (utile pour pré-remplir le
-formulaire en cas de modification des options de configuration et de réouverture de la popup).
+    <?php
+
+    return array(
+        // Généré automatiquement par le contrôleur lorsque les ``fields`` sont présents
+        'popup' => array(
+            'layout' => array(
+                'fields' => array(
+                    'view' => 'nos::form/fields',
+                    'params' => array(
+                        'fields' => array(/* Liste de tous les champs renseignés dans 'fields' */),
+                        'begin' => ' ',
+                        'end' => ' ',
+                    ),
+                ),
+            ),
+        ),
+    );
+
+Si vous souhaitez modifier ce ``layout`` par défaut (par exemple rajouter une 2e vue pour inclure du JavaScript), vous
+**devez** le renseigner en totalité (et remettre la vue ``nos::form/fields`` si vous en avez besoin).
+
+À l'intérieur des vues, les variables suivantes sont disponibles :
+
+- ``$enhancer_args`` : l'ancienne configuration de l'enhancer ;
+- ``$fieldset`` : lorsque vous avez renseignés des ``fields``, un ``Fieldset`` est créé dans cette variable.
 
 
 .. _app_create/enhancer/preview:
@@ -128,7 +153,7 @@ l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de v
 
     return array(
         // Configuration de la popup
-        'popup' => array(
+        'fields' => array(
             // Ce qu'on avait configuré plus tôt
         ),
         // Configuration de la prévisualisation
