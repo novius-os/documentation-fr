@@ -171,7 +171,7 @@ l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de v
     );
 
 
-À noter qu'il est possible de spécifier une fonction de callback à la fois pour le titre ou pour l'icône. Elle reçoit
+À noter qu'il est possible de spécifier une fonction de callback à la fois pour le titre ou pour l'icône. Elle recoit
 alors un paramètre : la configuration de l'enhancer ``$enhancer_args``.
 
 Par exemple, pour l'enhancer « Formulaire », le titre du formulaire sélectionné s'affiche.
