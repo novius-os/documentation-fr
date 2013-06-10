@@ -1,5 +1,3 @@
-.. _understand/multi_context/twinnable:
-
 ``Contextable`` / ``Twinnable``
 ###############################
 

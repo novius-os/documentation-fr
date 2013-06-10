@@ -5,10 +5,7 @@ Si votre application est ``Twinnable``, vous voulez peut-être rendre certains c
 Par exemple, dans l'application ``Monkey`` l'année de naissance, l'espèce et la photo d'un singe ne sont pas dépendantes du contexte.
 Un singe en version française aura la même année de naissance, la même espèce et la même photo que dans sa version anglaise.
 
-.. seealso::
-
-    * :doc:`/understand/multi_context/index`
-    * :ref:`understand/multi_context/twinnable`
+.. seealso:: :doc:`/understand/multi_context/index`
 
 Champ commun
 ************
