@@ -8,6 +8,7 @@ Créer une nouvelle application
 	template
 	add_field
 	appdesk_views
+	common_fields
 	attachment
 	translate
 	migrations
