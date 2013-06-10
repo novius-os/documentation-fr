@@ -2,7 +2,7 @@ Rajouter des champs
 ###################
 
 
-.. seealso:: /app_extend/add_field
+.. seealso:: :doc:`/app_extend/add_field`
 
 La majorité des champs qui sont ajoutés ont besoin d'une colonne dans la table MySQL correspondant à votre modèle.
 
