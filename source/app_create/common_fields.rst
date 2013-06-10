@@ -1,9 +1,9 @@
 Avoir des champs commun à tous les contextes
 ############################################
 
-Si votre application est ``Twinnable``, vous désirez peut-être rendre certains champs d'un modèle commun à tous les contextes.
-Par exemple, dans l'application ``Monkey`` la date de naissance, l'espèce et la photo d'un singe ne sont pas dépendantes du contexte.
-Un singe en version française aura la même date de naissance, la même espèce et la même photo que dans sa version anglaise.
+Si votre application est ``Twinnable``, vous voulez peut-être rendre certains champs d'un modèle commun à tous les contextes.
+Par exemple, dans l'application ``Monkey`` l'année de naissance, l'espèce et la photo d'un singe ne sont pas dépendantes du contexte.
+Un singe en version française aura la même année de naissance, la même espèce et la même photo que dans sa version anglaise.
 
 .. seealso::
 
