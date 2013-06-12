@@ -288,10 +288,10 @@ tiré de l'application « Blog » :
 .. _app_create/enhancers:
 
 Lorsque l'enhancer gère des URL pour certains modèles (ORM), c'est lui qui connait la procédure de génération des ces
-dernières. Pour ce faire, il faut alors implémenter une méthode statique ``get_url_model()`` qui va s'en occuper :
+dernières. Pour ce faire, il faut alors implémenter une méthode statique ``getUrlEnhanced()`` qui va s'en occuper :
 
 .. code-block:: php
-   :emphasize-lines: 7-26
+    :emphasize-lines: 7-29
 
     <?php
 
@@ -299,8 +299,10 @@ dernières. Pour ce faire, il faut alors implémenter une méthode statique ``ge
 
     class Controller_Front extends \Nos\Controller_Front_Application
     {
-        public static function get_url_model($item, $params = array())
+        public static function getUrlEnhanced($params = array())
         {
+            $item = \Arr::get($params, 'item', false);
+            if ($item) {
             $model = get_class($item);
             $page = isset($params['page']) ? $params['page'] : 1;
 
@@ -315,6 +317,7 @@ dernières. Pour ce faire, il faut alors implémenter une méthode statique ``ge
                 case 'Nos\Blog\Model_Category' :
                     return 'category/'.urlencode($item->virtual_name()).($page > 1 ? '/'.$page : '').'.html';
                     break;
+                }
             }
 
             return false;
