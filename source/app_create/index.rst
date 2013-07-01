@@ -12,3 +12,4 @@ Créer une nouvelle application
 	attachment
 	translate
 	migrations
+	create_behaviour
