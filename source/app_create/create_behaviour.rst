@@ -88,7 +88,7 @@ Les évènements statiques agissent de manière générale sur un modèle, et no
 
 La :ref:`liste des évènements statiques <api:php/behaviours/behaviour_event/static>` est disponible dans la documentation d'API.
 
-Les méthodes statiques ne reçoivent pas l'instance du modèle en tant que premier paramètre, mais uniquement les paramètres
+Les évènements statiques ne reçoivent pas l'instance du modèle en tant que premier paramètre, mais uniquement les paramètres
 spécifiques à l'évènement.
 
 Par exemple, les behaviours peuvent écouter des évènements qui leur permettent de modifier la configuration de l'AppDesk ou du CRUD.
@@ -116,4 +116,4 @@ Exemple avec l'évènement **crudConfig** :
     }
 
     // Pour information : en interne, Novius OS fait appel à cet évènement via ce code suivant :
-    Model_Class::eventStatic($config, $controller);
+    Model_Class::eventStatic('crudConfig', $config, $controller);
