@@ -3,7 +3,7 @@ Partage (Sharing)
 
 .. seealso::
 
-	`Partage dans Novius OS <http://novius-os.github.com/docs/fr/applications.html#sharing>`_
+	`Partage dans Novius OS <http://novius-os.github.com/docs/fr/applications.html#sharing>`__
 
 
 .. _sharing_content-nuggets:
@@ -23,7 +23,7 @@ Les données d'un content nugget ont une structure standardisées :
 * Texte
 * Image
 
-Pour pouvoir partager un item, il suffit de lui assigner le :ref:`Behaviour Sharable <behaviours_sharable>`, qui va
+Pour pouvoir partager un item, il suffit de lui assigner le :ref:`Behaviour Sharable <api:php/behaviours/sharable>`, qui va
 définir comment extraire ces données standardisées.
 
 
