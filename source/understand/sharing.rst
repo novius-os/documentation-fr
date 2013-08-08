@@ -35,8 +35,8 @@ Les data catchers sont des composants d’une application qui exploitent les con
 
 Ils sont définis dans le fichier :file:`metadata.config.php` d’une application, à l’image des autres composants (gabarits, enhancers et launchers).
 
-Data catchers inclus au logiciel
---------------------------------
+Data catchers inclus dans le logiciel
+-------------------------------------
 
 * Simple Twitter
 * Simple Facebook
