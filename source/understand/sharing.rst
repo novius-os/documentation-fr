@@ -49,7 +49,7 @@ Le data catcher ``Blog`` est utilisé pour créer des billets de blog à partir 
 Exemple : Simple Twitter
 ------------------------
 
-Voici comment est défini le data catcher simple pour Twitter :
+Voici comment est défini le data catcher de partage simple vers Twitter :
 
 .. code-block:: php
 
