@@ -1,9 +1,9 @@
-Partage (Sharing)
-*****************
+Partage de contenu
+******************
 
 .. seealso::
 
-	`Partage dans Novius OS <http://novius-os.github.com/docs/fr/applications.html#sharing>`__
+	`Infographie « Partage dans Novius OS » <http://novius-os.github.com/docs/fr/applications.html#sharing>`__
 
 
 .. _sharing_content-nuggets:
@@ -11,20 +11,19 @@ Partage (Sharing)
 Content nuggets
 ===============
 
-Un content nuggets est un ensemble de données à partager.
+Un « content nugget », ou pépite de contenu, est un ensemble cohérent de données destiné à être partagé.
 
 Structure des données
 ---------------------
 
-Les données d'un content nugget ont une structure standardisées :
+Les données d'un content nugget peuvent être de la nature suivante :
 
 * Titre
 * URL
 * Texte
 * Image
 
-Pour pouvoir partager un item, il suffit de lui assigner le :ref:`Behaviour Sharable <api:php/behaviours/sharable>`, qui va
-définir comment extraire ces données standardisées.
+Pour qu’une application puisse partager son contenu, il suffit de lui assigner le :ref:`Behaviour Sharable <api:php/behaviours/sharable>` et définir quelles sont les données constituant le content nugget.
 
 
 .. _sharing_data-catchers:
@@ -32,28 +31,25 @@ définir comment extraire ces données standardisées.
 Data catchers
 =============
 
-Les data catchers sont des composants qui exploitent les content nuggets (eux-mêmes générés par les modèles).
+Les data catchers sont des composants d’une application qui exploitent les content nuggets (eux-mêmes générés par les modèles).
 
-Ils sont définis par les applications dans leur fichier :file:`metadata.config.php`, exactement comme les gabarits, les enhancers et les launchers.
+Ils sont définis dans le fichier :file:`metadata.config.php` d’une application, à l’image des autres composants (gabarits, enhancers et launchers).
 
-Inclus au logiciel
-------------------
+Data catchers inclus au logiciel
+--------------------------------
 
-Déclenchés par l'utilisateur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Twitter
-* Facebook
-* Google+
+* Simple Twitter
+* Simple Facebook
+* Simple Google+
 * Blog
 
-Le data catcher ``Blog`` peut être utilisé pour créer des billets de blog à partir d'autres items, comme des singes (notre application bac-à-sable) ou des livres (celle-ci n'existe pas, c'est juste un exemple).
+Le data catcher ``Blog`` est utilisé pour créer des billets de blog à partir du contenu d’autres applications, notamment d’applications métiers spécifiques. Vous ajoutez, par exemple, un nouveau produit à votre catalogue, vous préparez facilement un billet de blog annonçant cette nouveauté.
 
 
-Exemple : **Twitter**
----------------------
+Exemple : Simple Twitter
+------------------------
 
-Voici comment est définit le Data catcher pour Twitter :
+Voici comment est défini le data catcher simple pour Twitter :
 
 .. code-block:: php
 
@@ -81,4 +77,4 @@ Voici comment est définit le Data catcher pour Twitter :
         ),
 	);
 
-Le data catcher **Twitter** nécessite au content nuggets d'avoir un titre. L'URL est optionnelle (mais sera utilisée si elle est fournie).
+Le data catcher **Simple Twitter** exploite des content nuggets ayant au moins un titre. L'URL est optionnelle, mais est utilisée quand elle est fournie.
