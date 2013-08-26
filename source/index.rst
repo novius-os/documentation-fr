@@ -22,8 +22,9 @@ Sommaire
 
 	install/index
 	understand/index
-	app_extend/index
+	manage/index
 	app_create/index
+	app_extend/index
 	release/index
 	contribute/index
 
