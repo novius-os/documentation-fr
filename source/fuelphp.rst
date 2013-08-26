@@ -41,7 +41,6 @@ Les vues sont situées dans le dossier :file:`views`.
 .. seealso:: `Documentation de FuelPHP sur les vues <http://fuelphp.com/docs/general/views.html>`__
 
 
-
 Comment utiliser l'ORM ?
 ------------------------
 
@@ -56,7 +55,7 @@ Les liens suivants vers la documentation de FuelPHP vous seront utiles :
 
 .. seealso:: `Créer des modèles <http://fuelphp.com/docs/packages/orm/creating_models.html>`__
 
-.. seealso:: `Faire des requêtes à partir des modèles <http://fuelphp.com/docs/packages/orm/creating_models.html>`__
+.. seealso:: `Faire des requêtes à partir des modèles <http://fuelphp.com/docs/packages/orm/crud.html>`__
 
 .. seealso:: `Définir des relations et s'en servir dans les requêtes <http://fuelphp.com/docs/packages/orm/relations/intro.html>`__
 
