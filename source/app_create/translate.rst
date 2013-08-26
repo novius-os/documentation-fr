@@ -10,6 +10,8 @@ qui contiennent eux-même les dictionnaires.
 
 Ces répertoires de langues portent des noms de locales, comme par exemple :file:`fr` (Français), ou :file:`en` (Anglais).
 
+.. image:: images/i18n_folder_structure.png
+
 Les dictionnaires sont des fichiers PHP qui retournent un tableau PHP, un peu comme les fichiers de configuration.
 
 .. seealso:: :ref:`API de la classe I18n <api:php/classes/i18n>`
@@ -53,11 +55,26 @@ ira chercher les traductions correspondantes.
 Autres fichiers
 ===============
 
+Partout ailleurs, vous pouvez utiliser la fonction :func:`__()` qui ira chercher (par défaut) les traductions dans le
+dictionnaire :file:`my_app::default`.
 
-Partout ailleurs, le mécanisme à utiliser pour rendre les fichiers sources traduisibles est le suivant :
+Par exemple :
 
-1. Utiliser la fonction :func:`__` pour récupérer la traduction ;
-2. Pour chaque fichier, configurer dans quel dictionnaire sont situées les traductions.
+.. code-block:: php
+
+    <?php
+
+    // La traduction sera récupérée depuis my_app::lang/<lang>/default.lang.php
+    __('Translate this');
+
+
+
+Mode avancé : configurez vos dictionnaires
+-------------------------------------------
+
+
+Si vous ne souhaitez pas mettre vos traductions dans le fichier :file:`default.lang.php`, vous pouvez configurer dans quel
+dictionnaire sont situées les traductions, **fichier par fichier**.
 
 
 C'est assez simple pour les vues et la configuration :
