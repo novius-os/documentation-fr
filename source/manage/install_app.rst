@@ -89,6 +89,10 @@ Allez ensuite dans le gestionnaire d'applications pour :guilabel:`« Prendre en 
 Méthode 2 : depuis un fichier .zip
 ==================================
 
+.. note::
+
+    Avant de mettre à jour une application, vérifiez que vos (éventuels) développements spécifiques sont compatibles.
+
 Sur GitHub, téléchargez la nouvelle version de l'application sous forme de fichier **.zip**.
 
 Remplacez ensuite le répertoire de correspondant dans :file:`local/applications` (vous pouvez supprimer l'ancien
