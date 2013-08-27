@@ -21,13 +21,13 @@ Voici quelques exemples pour illustrer ces propos :
 * ajout d'une action dans l'App Desk ou le CRUD ;
 * ajout d'une colonne dans le dataset (data_mapping) d'un modèle ;
 * ajout d'un champ dans le formulaire d'ajout / d'édition d'un item ;
-* ajout d'une méthode 'my_behaviour_method()' pour tous les modèles utilisant ce behaviour.
+* ajout d'une méthode 'myBehaviourMethod()' pour tous les modèles utilisant ce behaviour.
 
 On citera :
 
 - Le behaviour :ref:`Publishable <api:php/behaviours/publishable>`, qui rajoute un champ dans la configuration du CRUD et
   qui l'affiche en utilisant le Renderer_Publishable.
-- les behaviours :ref:`Urlenhancer <api:php/behaviours/urlenhancer>`, :ref:`Twinnable <php/behaviours/twinnable>` et :ref:`Sharable <php/behaviours/sharable>`
+- Les behaviours :ref:`Urlenhancer <api:php/behaviours/urlenhancer>`, :ref:`Twinnable <php/behaviours/twinnable>` et :ref:`Sharable <php/behaviours/sharable>`
   qui rajoutent respectivement les actions **visualiser**, **traduire** et **partager**.
 
 
@@ -172,8 +172,8 @@ Exemple avec l'**évènement statique** ``crudConfig``
     Model_Class::eventStatic('crudConfig', $config, $controller);
 
 
-Rajouter dynamiquement une méthode sur un modèle
-------------------------------------------------
+Rajouter dynamiquement une méthode d'instance sur un modèle
+-----------------------------------------------------------
 
 De la même manière que les évènements déclenchés par FuelPHP et les évènements d'instance, les méthodes dynamiques portent
 le même nom que la méthode à rajouter sur le modèle et prennent en premier paramètre **$item**, l'instance du modèle.
@@ -211,4 +211,42 @@ Par exemple, le ``Behaviour_Contextable`` dans Novius OS rajoute la méthode ``g
 
     // Cette méthode est disponible parce que Model_Monkey utilise Behaviour_Contextable, qui la rajoute
     $context = $monkey->get_context();
+
+Rajouter dynamiquement une méthode statique sur un modèle
+---------------------------------------------------------
+
+De la même façon que pour une méthode d'instance mais plus besoin du premier paramètre **$item**.
+
+.. code-block:: php
+
+    <?php
+
+    // Model file
+    class Model_Monkey extends Nos\Orm\Model
+    {
+        protected static $_behaviours = array(
+            'Orm_Behaviour_Twinnable' => array(
+                'context_property'      => 'monk_context',
+                'common_id_property' => 'monk_context_common_id',
+                'is_main_property' => 'monk_context_is_main',
+                'common_fields'   => array('monk_species_common_id', 'monk_birth_year'),
+            ),
+        );
+    }
+
+
+    // Behaviour file
+    class Orm_Behaviour_Twinnable extends Nos\Behaviour
+    {
+        public function hasCommonFields()
+        {
+            $class = $this->_class;
+            return count($this->_properties['common_fields']) > 0 ||
+                static::sharedWysiwygsContext($class) > 0 ||
+                static::sharedMediaContext($class) > 0;
+        }
+    }
+
+    // Use case
+    Model_Monkey::hasCommonFields();
 
