@@ -49,6 +49,10 @@ Le texte en gras est la valeur de la propriété ``type``.
 * <input type="**button**">
 * <input type="**file**">
 
+
+Champ <select>
+^^^^^^^^^^^^^^
+
 .. code-block:: php
 
 	<?php
@@ -60,7 +64,7 @@ Le texte en gras est la valeur de la propriété ``type``.
 				'options' => array(
 					'm' => 'Masculin',
 					'f' => 'Féminin',
-				)
+				),
 			),
 			'validation' => array('required'),
 		),
