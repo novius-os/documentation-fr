@@ -2,7 +2,7 @@ Créer votre Behaviour
 #####################
 
 
-A quoi ça sert ?
+À quoi ça sert ?
 ================
 
 Créer un behaviour permet d'appliquer un même comportement sur plusieurs modèles différents, en partageant la même
