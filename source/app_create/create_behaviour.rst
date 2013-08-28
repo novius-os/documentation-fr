@@ -9,7 +9,7 @@ Créer un behaviour permet d'appliquer un même comportement sur plusieurs modè
 base de code réutilisable.
 
 Les behaviours sont une extension du mécanisme d'observers présents dans FuelPHP. Ils permettent notamment (comme pour
-les observers), d'écouter les notifications ``before_*`` et ``after_*`` déclenchés par FuelPHP.
+les observers), d'écouter les notifications ``before_*`` et ``after_*`` déclenchées par FuelPHP.
 
 Les behaviours permettent deux fonctionnalités supplémentaires :
 
