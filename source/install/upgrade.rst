@@ -63,6 +63,6 @@ Dans le back-office de votre Novius OS, ouvrez l'application ``Gestion des appli
 Mettre à jour vos développement
 *******************************
 
-Si vous avez des développements personnels, suivez la procédure le :doc:`/release/migrate_from_0.1_to_0.2`.
+Si vous avez des développements personnels, suivez la procédure le :doc:`/release/migrate_from_0.2_to_chiba.1`.
 
 
