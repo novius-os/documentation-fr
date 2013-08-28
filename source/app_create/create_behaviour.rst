@@ -2,7 +2,7 @@ Créer votre Behaviour
 #####################
 
 
-A quoi ça sert ?
+À quoi ça sert ?
 ================
 
 Créer un behaviour permet d'appliquer un même comportement sur plusieurs modèles différents, en partageant la même
@@ -83,10 +83,10 @@ behaviours. Cette configuration sera disponible dans la variable **$this->_prope
 Écouter un évènement déclenché par FuelPHP (Observer)
 -----------------------------------------------------
 
-Ce sont les évènement de type ``before_*`` et ``after_*``.
+Ce sont les évènements de type ``before_*`` et ``after_*``.
 
-Par exemple, Behaviour_Author stocke l'ID des utilisateurs ayant créé / modifié un item dans une colonne du modèle grâce
-(respectivement) aux évènements ``before_insert`` et ``before_save`` fournis par FuelPHP.
+Par exemple, ``Behaviour_Author`` stocke l'ID des utilisateurs ayant créé / modifié un item dans une colonne du modèle grâce
+(respectivement) aux évènements ``before_insert`` et ``before_save`` `fournis par l'ORM de FuelPHP <http://fuelphp.com/docs/packages/orm/observers/creating.html#/event_names>`__.
 
 
 .. code-block:: php
@@ -130,7 +130,8 @@ Il existe deux types d'évènements :
 La :ref:`liste des évènements (d'instance et statiques) <api:php/behaviours/behaviour_event>` est disponible dans la documentation d'API.
 
 Un évènement est appelé sur tous les Behaviour qui ont implémenté la méthode correspondante. La valeur de retour de ces méthodes
-n'a pas d'importance : les évènements utilisent les arguments passés par référence pour agir.
+n'a pas d'importance : les évènements utilisent les `arguments passés par référence <http://php.net/manual/fr/language.references.pass.php>`__
+pour agir.
 
 
 Exemple avec l'**évènement d'instance** ``form_processing`` (déclenché lors de la sauvegarde d'un item via le CRUD).
@@ -211,6 +212,7 @@ Par exemple, le ``Behaviour_Contextable`` dans Novius OS rajoute la méthode ``g
 
     // Cette méthode est disponible parce que Model_Monkey utilise Behaviour_Contextable, qui la rajoute
     $context = $monkey->get_context();
+
 
 Rajouter dynamiquement une méthode statique sur un modèle
 ---------------------------------------------------------
