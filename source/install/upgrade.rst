@@ -23,7 +23,7 @@ Si vous avez installé Novius OS avec :program:`Git`, placez-vous dans le réper
 
         warning: unable to rmdir packages/log: Le dossier n'est pas vide
 
-    si c'est le cas, exécutez la commande suivant
+    si c'est le cas, exécutez la commande suivante :
 
     .. code-block:: bash
 
