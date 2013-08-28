@@ -85,7 +85,7 @@ Si vous n'avez pas accès à :program:`SSH`, vous pouvez faire la migration via 
 
 .. warning::
 
-    Quand vous allez accéder à votre back-office sans avoir lancé les migration, votre logiciel sera dans un état instable.
+    Quand vous allez accéder à votre back-office sans avoir lancé les migrations, votre logiciel sera dans un état instable.
     Les sources ne correspondront pas avec l'état de la base de données. Vous aurez sans doute des messages d'erreur.
     Vous pouvez les ignorer.
 
