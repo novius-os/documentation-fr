@@ -16,6 +16,8 @@ Nouveautés
 Développeur
 ===========
 
+.. _release/chiba.2/breaking_changes:
+
 Ruptures de compatibilité
 -------------------------
 
@@ -81,6 +83,8 @@ Améliorations
 * **Misc**: Toutes les URL sont maintenant encodées quand utilisées dans un ``href`` ou une redirection.
 * **Misc**: Nouveau répertoire ``temp`` dans :file:`local/data`, assigné à la clé de configuration :ref:`novius-os.temp_dir <api:php/configuration/software>` par défaut.
 * **Front**: ``is_preview`` n'est vrai que si l'utilisateur est connecté.
+
+.. _release/chiba.2/deprecated:
 
 Déprécier
 ---------
