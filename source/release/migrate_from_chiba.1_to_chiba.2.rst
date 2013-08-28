@@ -21,6 +21,7 @@ Model : les colonnes d'un ``dataset`` sont encodées
 Si une colonne d'un ``dataset`` contient du HTML, vous devez ajouter un paramètre ``isSafeHtml`` pour ne pas qu'elle soit encodée.
 
 .. code-block:: php
+   :emphasize-lines: 8
 
     <?php
     return array(
@@ -47,8 +48,8 @@ Si vous utilisez ``success`` dans vos développements, vérifier que votre code 
 
 .. _release/migrate_from_chiba.1_to_chiba.2/attachment:
 
-Attachment : ``->url()`` et ``->urlResized()`` retourne des URL absolues
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Attachment : ``->url()`` et ``->urlResized()`` retournent des URL absolues
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Les méthodes ``->url()`` and ``->urlResized()`` retourne maintenant des URL absolues. Vous avez 2 possibilités de modification de vos développements :
 
@@ -68,7 +69,7 @@ Les méthodes ``->url()`` and ``->urlResized()`` retourne maintenant des URL abs
 Comments : Les commentaires sont maintenant ``contextable``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La migration essai de deviner le context des commentaires existants, mais si vous avez implémenté les commentaires sur un modèle non ``contextable``,
+La migration essaye de deviner le contexte des commentaires existants, mais si vous avez implémenté les commentaires sur un modèle non ``contextable``,
 la migration ne pourra rien. Dans ce cas vous devrez assigner vous-même les contexts aux commentaires
 (colonne ``comm_context`` de la table ``nos_comment``) si vous voulez les voir dans l'interface d'administration.
 
@@ -86,22 +87,23 @@ Si vous voulez revenir à la configuration précédente :
 * Modifier la configuration de cette façon :
 
     .. code-block:: php
+	   :emphasize-lines: 7-8,11
 
         <?php
 
-            return array(
-                'thumbnail' => array(
-                    'front' => array(
-                        'list' => array(
-                            'link_to_item' => false,
-                            'max_width' => 200.
-                        ),
-                        'item' => array(
-                            'link_to_fullsize' => false,
-                        ),
+        return array(
+            'thumbnail' => array(
+                'front' => array(
+                    'list' => array(
+                        'link_to_item' => false,
+                        'max_width' => 200.
+                    ),
+                    'item' => array(
+                        'link_to_fullsize' => false,
                     ),
                 ),
-            );
+            ),
+        );
 
 Dépréciés
 ---------
@@ -132,7 +134,7 @@ Code déprécié :
         return false;
     }
 
-A remplacer par :
+À remplacer par :
 
 .. code-block:: php
 

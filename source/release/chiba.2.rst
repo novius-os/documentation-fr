@@ -7,7 +7,7 @@ Nouveautés
 * Support de Windows à partir de Windows Vista
 * Amélioration du wizard d'installation (interface, plus de tests, choix des langues)
 * Permissions avancées dans les applications natives
-* Application commentaires:
+* Application commentaires :
 
     * Interface d'administration
     * Emails are sent when new comments are posted, to post author and others commenters.
@@ -66,12 +66,12 @@ Améliorations
 * **UI**: Utilisation des select, checkbox et radio natifs du navigateur, plus aucune utilisation des widgets Wijmo pour ces ``inputs``.
 * **Page**: L'assignation de la page d'accueil n'est plus permise en vue multi-contextes.
 * **Page**: La suppression et la dépublication de la page d'accueil ne sont plus autorisés.
-* **Page**: Augmentation de la taille des champs title et url.
+* **Page**: Augmentation du nombre de caractères autorisés dans les champs title et url.
 * **Media**: Nouveau champ ``filesize``. Affichage du poids et des dimensions dans la prévisualisation de l'appdesk preview dans le formulaire de CRUD.
 * **Media**: Refactoring des méthodes ``get_img_tag()`` et ``get_img_tag_resized()`` de :ref:`Model_Media <api:php/models/media/model_media/methods>`, utilisation de ``HTML::img()`` pour renvoyer un tag avec des attributs.
 * **Media**: Vous pouvez maintenant transformer (crop, rotate, rounded, watermark, resize, shrink, grayscale, border) les images des Media et des Attachments avec le :ref:`Toolkit_Image API <api:php/classes/toolkit_image>`.
 * **Media**: Nouvelle action "Régénérer le cache média" dans la barre d'outils de l'appdesk des Media, visible pour les utilisateurs en mode expert.
-* **Media**: Augmentation de la taille des champs title et url.
+* **Media**: Augmentation du nombre de caractères autorisés dans les champs title et url.
 * **Comments**: Nouvelle API pour l'utilisation de l'application ``noviusos_comments``.
 * **Form**: Nouvelle ``view`` ``message`` pour la confirmation.
 * **Blog/News**: Les vignettes sont maintenant configurable (taille et lien).
@@ -82,7 +82,7 @@ Améliorations
 
 .. _release/chiba.2/deprecated:
 
-Déprécier
+Dépréciés
 ---------
 
 * :ref:`release/migrate_from_chiba.1_to_chiba.2/enhancer`
