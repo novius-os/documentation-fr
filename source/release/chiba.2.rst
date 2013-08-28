@@ -16,19 +16,14 @@ Nouveautés
 Développeur
 ===========
 
-.. _release/chiba.2/breaking_changes:
-
 Ruptures de compatibilité
 -------------------------
 
-* **Model**: Si une colonne d'un ``dataset`` contient du HTML, vous devez ajouter un paramètre :ref:`'isSafeHtml' => true <api:php/configuration/application/common>` pour ne pas qu'elle soit encodée (pour des raisons de sécurité).
-* **CRUD**: Pour la mise à jour d'item, la fonction de callback ``success`` est appelée après le ``save`` (pas avant), comme pour la création.
-* **Attachment**: Les méthodes ``->url()`` and ``->urlResized()`` :ref:`retourne des URL absolues <api:php/classes/attachment>`. Elles acceptent un paramètre optionnel pour retourner des URL relatives.
-* **Comments**: Les commentaires sont maintenant ``contextable``. La migration essai de deviner le context des commentaires existants, mais si vous avez implémenté les commentaires sur un modèle non ``contextable``, la migration ne pourra rien : vous devrez assigner vous-même les contexts à aux commentaires si vous voulez les voir dans l'interface d'administration.
-* **Blog/News**: Les vignettes sont maintenant configurable (taille et lien).
-
-    * La taille par défaut change de 200 à 120 pixels sur la liste, toujours 200 pour la fiche.
-    * Les vignettes sont cliquables pour aller sur la fiche de l'item (définir ``thumbnail.front.list.link_to_item = false`` pour retrouver l'ancien comportement).
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/model_dataset`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/crud_success`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/attachment`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/comments`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/blognews`
 
 Mise à jour des librairies tierces
 ----------------------------------
@@ -79,6 +74,7 @@ Améliorations
 * **Media**: Augmentation de la taille des champs title et url.
 * **Comments**: Nouvelle API pour l'utilisation de l'application ``noviusos_comments``.
 * **Form**: Nouvelle ``view`` ``message`` pour la confirmation.
+* **Blog/News**: Les vignettes sont maintenant configurable (taille et lien).
 * **Misc**: Nouveaux événements :ref:`404.mediaFound <api:php/events/404.mediaFound>`, :ref:`404.attachmentFound <api:php/events/404.attachmentFound>`, :ref:`admin.loginFail <api:php/events/admin.loginFail>` et :ref:`nos.deprecated <api:php/events/nos.deprecated>`.
 * **Misc**: Toutes les URL sont maintenant encodées quand utilisées dans un ``href`` ou une redirection.
 * **Misc**: Nouveau répertoire ``temp`` dans :file:`local/data`, assigné à la clé de configuration :ref:`novius-os.temp_dir <api:php/configuration/software>` par défaut.
@@ -89,8 +85,8 @@ Améliorations
 Déprécier
 ---------
 
-* **Enhancer**: ``get_url_model($item, $params)`` dans :ref:`le controller front-office des enhancers <app_create/enhancer/url>` est déprécié, utiliser ``getURLEnhanced($params)`` et ``$item`` dans une clé ``item`` de ``$params``.
-* **Media**: Changement dans l':ref:`API de Model_Media <api:php/models/media/model_media/methods>`, dépréciations de toutes les méthodes en ``snake_case``.
-* **Media**: Dépréciation des méthodes ``delete_from_disk()`` et ``delete_public_cache()`` de :ref:`Model_Folder <api:php/models/media/model_folder/methods>`. Utiliser ``deleteFromDisk()`` et ``deleteCache()`` à la place.
-* **Page**: ``Model_Page->link()`` est déprécié, utiliser :ref:`Model_Page->htmlAnchor() <api:php/models/model_page/methods>` à la place.
-* **Misc**: L'événement ``user_login`` est déprécié, utiliser :ref:`admin.loginSuccess <api:php/events/admin.loginSuccess>` à la place.
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/enhancer`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/media`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/media_folder`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/page_link`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/user_login`
