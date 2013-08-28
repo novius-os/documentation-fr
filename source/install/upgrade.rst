@@ -93,5 +93,3 @@ Mettre à jour vos développement
 *******************************
 
 Si vous avez des développements personnels, suivez la procédure le :doc:`/release/migrate_from_chiba.1_to_chiba.2`.
-
-
