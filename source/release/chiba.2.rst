@@ -74,7 +74,7 @@ Améliorations
 * **Media**: Augmentation du nombre de caractères autorisés dans les champs title et url.
 * **Comments**: Nouvelle API pour l'utilisation de l'application ``noviusos_comments``.
 * **Form**: Nouvelle ``view`` ``message`` pour la confirmation.
-* **Blog/News**: Les vignettes sont maintenant configurable (taille et lien).
+* **Blog/News**: :ref:`Les vignettes sont maintenant configurable (taille et lien) <api:applications/noviusos_blognews>`.
 * **Misc**: Nouveaux événements :ref:`404.mediaFound <api:php/events/404.mediaFound>`, :ref:`404.attachmentFound <api:php/events/404.attachmentFound>`, :ref:`admin.loginFail <api:php/events/admin.loginFail>` et :ref:`nos.deprecated <api:php/events/nos.deprecated>`.
 * **Misc**: Toutes les URL sont maintenant encodées quand utilisées dans un ``href`` ou une redirection.
 * **Misc**: Nouveau répertoire ``temp`` dans :file:`local/data`, assigné à la clé de configuration :ref:`novius-os.temp_dir <api:php/configuration/software>` par défaut.
