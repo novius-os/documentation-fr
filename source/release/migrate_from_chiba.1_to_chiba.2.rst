@@ -36,7 +36,7 @@ Si une colonne d'un ``dataset`` contient du HTML, vous devez ajouter un paramèt
         ),
     );
 
-.. seealso:: :ref:`Common configuration for Model <api:php/configuration/application/common>`
+.. seealso:: :ref:`Configuration common des modèles <api:php/configuration/application/common>`
 
 .. _release/migrate_from_chiba.1_to_chiba.2/crud_success:
 
