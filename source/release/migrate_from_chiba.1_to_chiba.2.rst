@@ -51,7 +51,7 @@ Si vous utilisez ``success`` dans vos développements, vérifier que votre code 
 Attachment : ``->url()`` et ``->urlResized()`` retournent des URL absolues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Les méthodes ``->url()`` and ``->urlResized()`` retourne maintenant des URL absolues. Vous avez 2 possibilités de modification de vos développements :
+Les méthodes ``->url()`` et ``->urlResized()`` retourne maintenant des URL absolues. Vous avez 2 possibilités de modification de vos développements :
 
 * Vérifier que vous ne concateniez pas le ``base_url`` devant l'appel de ces méthodes.
 * Ajouter un paramètre égal à ``false`` dans l'appel de la méthode.
