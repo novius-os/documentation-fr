@@ -10,7 +10,7 @@ Nouveautés
 * Application commentaires :
 
     * Interface d'administration
-    * Emails are sent when new comments are posted, to post author and others commenters.
+    * Quand un nouveau commentaire est posté, envoi d'un email à l'auteur du billet et aux autres commentateurs.
 
 
 Développeur
