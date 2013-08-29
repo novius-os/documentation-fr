@@ -11,25 +11,30 @@ Installation
 Prérequis généraux
 ******************
 
-* Disposer d'un serveur :program:`LAMP` avec PHP 5.3+.
+Disposer d'un serveur avec MySQL et PHP 5.3+
+
+Novius OS tourne aussi bien sur :
+
+* :program:`Linux`, :program:`Mac OS` que :program:`Windows` (à partir de Vista)
+* :program:`Apache` avec le **mod_rewrite** activé ou :program:`Nginx`
+
+LAMP
+====
+
+Nous décrivons ci-après la procédure d'installation sur un serveur :program:`LAMP` (Linux/Apache/MySQL/PHP), de type :program:`Debian`,
+sur lequel vous avez les droits d'administration. À adapter à votre configuration.
+
+* Installation de :program:`AMP`
 
 	.. code-block:: bash
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
 
-* Avoir le **mod_rewrite** d’:program:`Apache` activé.
+* Activer le **mod_rewrite** d’:program:`Apache`.
 
 	.. code-block:: bash
 
 			sudo a2enmod rewrite
-
-| Les commandes sont données à titre d'exemple si vous installez Novius OS sur votre machine locale ou un serveur sur lequel vous avez les droits d'administration.
-| Elles sont valables pour installation sur Ubuntu, adaptez-les en fonction de votre distribution.
-
-
-.. note::
-
-	Théoriquement Novius OS peut fonctionner avec un serveur autre qu':program:`Apache`.
 
 Installation rapide
 *******************
@@ -164,3 +169,10 @@ Cette commande télécharge le dépôt principal, avec plusieurs submodules :
 	cd /var/www/novius-os/
 	git checkout dev
 	git submodule update --recursive
+
+Installation sur serveur Nginx
+==============================
+
+Exemple de configuration Nginx :
+
+.. literalinclude:: nginx.txt
