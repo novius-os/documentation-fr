@@ -173,6 +173,6 @@ Cette commande télécharge le dépôt principal, avec plusieurs submodules :
 Installation sur serveur Nginx
 ==============================
 
-Exemple de configuration Nginx :
+Exemple de configuration :program:`Nginx` :
 
 .. literalinclude:: nginx.txt
