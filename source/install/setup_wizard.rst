@@ -44,7 +44,7 @@ nécessaires dans votre base de données.
 ------------------------------------------------
 
 Remplissez les champs demandés pour créer le premier compte administrateur de votre Novius OS.
-L'email et le mot de passe vous serviront pour votre première connection.
+L'email et le mot de passe vous serviront pour votre première connexion.
 Ces informations seront ensuite modifiables via le back-office.
 
 Étape 4: Choix des langues
