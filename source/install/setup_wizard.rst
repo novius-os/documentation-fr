@@ -35,33 +35,28 @@ base en ``localhost`` :
     GRANT ALL PRIVILEGES ON `nom_de_votre_base`.* TO 'nom_de_votre_utilisateur'@localhost IDENTIFIED BY 'mot_de_passe';
     FLUSH PRIVILEGES;
 
-Remplissez ces quatre champs en fonction de la configuration de votre base :
+Remplissez les quatre champs demandés en fonction de la configuration de votre base.
 
-.. image:: images/setup_wizard/step-2.png
-	:alt: Étape 2
-	:align: center
-
-Ceci va créer deux fichiers :file:`local/config/db.php` et :file:`local/config/crypt.php` et, surtout, les tables
+Cette étape va créer deux fichiers :file:`local/config/db.php` et :file:`local/config/crypt.php` et, surtout, les tables
 nécessaires dans votre base de données.
 
 Étape 3 : Créer le premier compte administrateur
 ------------------------------------------------
 
-.. image:: images/setup_wizard/step-3.png
-	:alt: Étape 3
-	:align: center
+Remplissez les champs demandés pour créer le premier compte administrateur de votre Novius OS.
+L'email et le mot de passe vous serviront pour votre première connection.
+Ces informations seront ensuite modifiables via le back-office.
 
-
-Étape 4: Terminer l'installation
+Étape 4: Choix des langues
 --------------------------------
+
+Choisissez (ou ajoutez) les langues disponibles dans le front-office de votre site avant de finir l'installation.
 
 .. image:: images/setup_wizard/step-4.png
 	:alt: Étape 4
 	:align: center
 
-.. warning::
-
-    Nous vous conseillons vivement de suivre les recommandation de cette page.
+.. seealso::
 
     Concernant le paramétrage des contextes, reportez-vous aux :doc:`principes </understand/multi_context/principles>` et :ref:`à la documentation d'API <api:php/configuration/software/multi_contexts>`.
 

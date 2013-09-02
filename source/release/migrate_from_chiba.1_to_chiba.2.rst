@@ -87,7 +87,6 @@ Si vous voulez revenir à la configuration précédente :
 * Modifier la configuration de cette façon :
 
     .. code-block:: php
-	   :emphasize-lines: 7-8,11
 
         <?php
 
