@@ -12,6 +12,9 @@ Nouveautés
     * Interface d'administration
     * Quand un nouveau commentaire est posté, envoi d'un email à l'auteur du billet et aux autres commentateurs.
 
+.. versionadded:: Chiba2.1
+
+* L'ajout de media en masse.
 
 Développeur
 ===========
@@ -80,6 +83,17 @@ Améliorations
 * **Misc**: Nouveau répertoire ``temp`` dans :file:`local/data`, assigné à la clé de configuration :ref:`novius-os.temp_dir <api:php/configuration/software>` par défaut.
 * **Front**: ``is_preview`` n'est vrai que si l'utilisateur est connecté.
 
+.. versionadded:: Chiba 2.1
+
+* **Media**: Bugfix, les images transformées ne s'affichaient en front-office que pour les utilisateurs connectés au back-office. Les autres obtenaient un ``403``.
+* **Media**: Bugfix dans les permissions des medias; quand un utilisateur était mis à jour, ces droits en écriture sur les médias étaient désactivés.
+* **CRUD**: La configuration du boutton ``save`` n'est plus obligatoire dans la définition des champs d'un CRUD.
+* **ORM**: Dans les modèles, si vous utilisez ``cache_model_properties``, nouvelle possibilité de définir une fonction de callback (``check_property_callback``, voir :file:`local/config/config.php.sample`) pour vérifier si une propriété est un potentiel nouveau champ, et ainsi éviter une requête SQL ``show field``.
+* **Renderer**: Nouvelle classe ``Nos\Renderer`` pour factoriser du code entre tous les renderers.
+* **Templates basic**: Réorganisation pour une meilleur factorisation de code entre les templates avec menu en haut et à gauche.
+* **Slideshow**: Réorganisation de la configuration et des fichiers. Les widgets d'affichage en front-office sont gérés avec une configuration par formats pour être plus facilement étendables.
+* **Blog/News and Comments**: Meilleur nettoyage du cache front-office quand un post ou un commentaire sont insérés, mis à jour ou supprimés.
+
 .. _release/chiba.2/deprecated:
 
 Dépréciés
@@ -90,3 +104,8 @@ Dépréciés
 * :ref:`release/migrate_from_chiba.1_to_chiba.2/media_folder`
 * :ref:`release/migrate_from_chiba.1_to_chiba.2/page_link`
 * :ref:`release/migrate_from_chiba.1_to_chiba.2/user_login`
+
+.. versionadded:: Chiba 2.1
+
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/renderer_selector`
+* :ref:`release/migrate_from_chiba.1_to_chiba.2/slideshow`

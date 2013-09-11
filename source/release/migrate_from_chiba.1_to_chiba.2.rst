@@ -207,3 +207,31 @@ L'événement ``user_login`` est déprécié, utiliser ``admin.loginSuccess`` à
 
 .. seealso:: :ref:`api:php/events/admin.loginSuccess`
 
+Migration Chiba 2 à Chiba 2.1
+*****************************
+
+.. versionadded:: Chiba 2.1
+
+Dépréciés
+---------
+
+Une mise en conformité n'est pas obligatoire mais souhaitable pour pouvoir migrer sans soucis lors de prochaine version.
+
+.. _release/migrate_from_chiba.1_to_chiba.2/renderer_selector:
+
+Renderer_Selector->set_renderer_options()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+La methode ``set_renderer_options()`` est dépréciée et devient ``setRendererOptions()``.
+
+.. _release/migrate_from_chiba.1_to_chiba.2/slideshow:
+
+Slideshow : vues et configuration front-office
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Le fichier de configuration :file:`noviusos_slideshow::slideshow` a été réorganisé afin de mieux séparé les différents formats de diaporama. Voir :ref:`la documentation d'API de Slideshow <api:applications/noviusos_slideshow>`.
+* Le fichier de configuration :file:`noviusos_slideshow::flexslider` est déprécié et devient :file:`noviusos_slideshow::formats/flexslider`.
+* La vue :file:`noviusos_slideshow::slideshow_js` est déprécié et devient :file:`noviusos_slideshow::flexslider/javascript instead`.
+* La vue :file:`noviusos_slideshow::slideshow` est déprécié et devient :file:`noviusos_slideshow::flexslider/slideshow instead`.
+
+La version Chiba 2.1 de l'application Slideshow a des migrations en base de données a effectuer. Voir :ref:`install/upgrade/migration`.

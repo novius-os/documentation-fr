@@ -51,6 +51,8 @@ Si vous avez téléchargé Zip, la procédure est plus complexe.
 
 Vous pouvez alors continuer votre mise à jour.
 
+.. _install/upgrade/migration:
+
 Lancer la migration
 *******************
 

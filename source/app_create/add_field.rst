@@ -94,6 +94,10 @@ FuelPHP utilisera automatiquement la ``value`` comme texte du bouton.
 		),
 	);
 
+.. versionadded:: Chiba2.1
+
+La clé ``save`` n'est plus obliigatoire dans la configuration des champs d'un CRUD.
+
 
 Renderers (champs améliorés)
 ----------------------------
