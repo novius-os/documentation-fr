@@ -107,7 +107,7 @@ html_theme_options = {
 	"sidebarwidth": 300,
 	"commonbar_lang" : "fr",
 	"commonbar_switch" : "en",
-	"commonbar_switch_url" : "http::docs.novius-os.org"
+	"commonbar_switch_url" : "http::/docs.novius-os.org"
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
