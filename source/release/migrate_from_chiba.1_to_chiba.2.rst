@@ -224,6 +224,13 @@ Renderer_Selector->set_renderer_options()
 
 La methode ``set_renderer_options()`` est dépréciée et devient ``setRendererOptions()``.
 
+.. _release/migrate_from_chiba.1_to_chiba.2/renderer_media:
+
+Renderer_Media->parse_options()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+La methode ``parse_options()`` est dépréciée et devient ``parseOptions()``.
+
 .. _release/migrate_from_chiba.1_to_chiba.2/slideshow:
 
 Slideshow : vues et configuration front-office
