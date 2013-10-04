@@ -25,6 +25,9 @@ La raison de ce fonctionnement est pour l'ajout futur de médias **privé**. Pou
 * soit le fichier sera envoyé sur la sortie standard, mais sans création de lien symbolique (le droit d'accès est
   vérifié lors de chaque requête).
 
+Dans le cas des :doc:`images transformées </app_create/image_transform>`, le processus est similaire
+avec une étape supplémentaire : l'enregistrement de l'image transformée dans le répertoire :file:`local/cache/media/`.
+
 Optimisation
 ************
 
