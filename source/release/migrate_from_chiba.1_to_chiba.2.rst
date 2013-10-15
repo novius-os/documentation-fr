@@ -104,6 +104,13 @@ Si vous voulez revenir à la configuration précédente :
             ),
         );
 
+.. _release/migrate_from_chiba.1_to_chiba.2/getUrlEnhanced:
+
+URL Enhancer: Methode getUrlEnhanced() obligatoire
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Tous les URL enhancers doivent implémenter une :ref:`méthode  getUrlEnhanced() <app_create/enhancers>`.
+
 Dépréciés
 ---------
 
