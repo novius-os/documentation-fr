@@ -1,44 +1,63 @@
 server {
-listen 80;
-server_name localhost;
+  listen 80;
+  server_name localhost;
 
-root /var/www/novius-os;
-index index.php index.html;
+  root /var/www/novius-os;
+  index index.php index.html;
 
-access_log /var/log/nginx/access.log;
-error_log /var/log/nginx/error.log notice;
+  access_log /var/log/nginx/access.log;
+  error_log /var/log/nginx/error.log notice;
 
-location = /favicon.ico {
-log_not_found off;
-access_log off;
-}
+  location = /favicon.ico {
+    log_not_found off;
+    access_log off;
+  }
 
-location = /robots.txt {
-allow all;
-log_not_found off;
-access_log off;
-}
+  location = /robots.txt {
+    allow all;
+    log_not_found off;
+    access_log off;
+  }
 
-error_page 404 /public/htdocs/novius-os/404.php;
+  # Install script
+  location /install.php {
+    error_page 404 /public/htdocs/novius-os/404.php;
+    try_files /public/htdocs/$uri =404;
+  }
 
-autoindex off;
+  # Back
+  location /admin {
+    rewrite ^/(admin(/.*)?)$ /public/htdocs/novius-os/admin.php;
+  }
 
-location @rewrites {
-rewrite ^/(admin(/.*)?)$ /public/htdocs/novius-os/admin.php last;
-rewrite ^/.+(.html|/)$ /public/htdocs/novius-os/front.php last;
-rewrite ^/([^.]*)$ /public/htdocs/novius-os/front.php last;
-rewrite ^ /public/htdocs/novius-os/front.php last;
-}
+  # Cache
+  location ^~ /cache/ {
+    error_page 404 /public/htdocs/novius-os/404.php;
+    try_files /local/$uri =404;
+  }
 
-rewrite ^/(static|cache|media|data|htdocs)/(.*) /public/$1/$2 break;
-rewrite ^/install.php /public/htdocs/install.php last;
+  # Media files
+  location ~ ^/media/(.*) {
+    try_files /local/data/media/$1 =404;
+  }
 
-try_files $uri @rewrites;
+  # Static files
+  location /static/ {
+    try_files /public/$uri =404;
+  }
 
-location ~ \.php$ {
- fastcgi_split_path_info ^(.+\.php)(/.+)$;
- fastcgi_pass unix:/var/run/php5-fpm.sock;
- fastcgi_index index.php;
- include fastcgi_params;
- }
+  # Front
+  location / {
+    error_page 404 /public/htdocs/novius-os/404.php;
+    rewrite ^ /public/htdocs/novius-os/front.php;
+    try_files $uri =404;
+  }
+
+  # PHP scripts
+  location ~ ^/public/htdocs/(.*)\.php$ {
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_index index.php;
+    include fastcgi_params;
+  }
 }
