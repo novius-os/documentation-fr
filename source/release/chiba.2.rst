@@ -104,6 +104,22 @@ Améliorations
              Un application, `novius_taskmanager <https://github.com/novius/novius_taskmanager>`__, a été réalisée permettant la gestion et l'exécution des ``Tasks`` via le navigateur.
 * **Form**: Amélioration de la mise en page des emails de réponse à un formulaire.
 
+.. versionadded:: Chiba 2.3
+
+* **PHP**: La version 5.5 est officiellement supportée
+* **Renderer**: Nouvelle option ``null_allowed`` (à ``false`` par défaut) pour ``Nos\Renderer_Datetime_Picker``
+* **Misc**: Optimisation de ``Toolkit_Image->sizes()``, Les images des ``Media`` ne sont plus chargées en mémoire
+* **WYSIWYG**: Dans la popup image, nouveaux champs border, align, vspace et hspace pour faciliter l'édition du style
+* **CRUD**: Le javascript pour les ``context common fields`` est amélioré. Maintenant, les champs non supportés peuvent implémenter leur propre système de verrouillage
+* **CRUD**: Le système de verrouillage des ``context common fields`` est amélioré. Maintenant il fonctionne aussi pour les champs non basés sur un input (ie: comme pour les renderers basés sur un ``<div>``)
+* **CRUD**: Le système de verrouillage des ``context common fields`` supporte les champs basé sur le renderer virtual name
+* **Profiler**: Certains items de la config ne sont plus affichés pour des raisons de sécurités
+* **Profiler**: Nouvelles méthodes ``markDeltaStart()`` et ``markDeltaStop()`` pour l'étude des durées d'exécution
+* **ORM**: Nouveau paramètre ``through_where`` dans la configuration des relations ``many_many``
+* **Form**: Ajout d'un ``replyto`` aux emails envoyés si un champ email est présent dans la réponse. Dépend de la clé de configuration ``add_replyto_to_first_email`` du fichier ``noviusos_form.config.php`` (par défault à ``true``)
+* **Form**: Déplacement du champ de l'émail destinataire en haut du formulaire d'administration
+* **AppWizard**: Ajout d'une vérification préalable sur les droits d'écriture dans le dossier ``local/applications``
+
 .. _release/chiba.2/deprecated:
 
 Dépréciés
