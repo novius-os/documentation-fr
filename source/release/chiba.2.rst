@@ -120,6 +120,11 @@ Améliorations
 * **Form**: Déplacement du champ de l'émail destinataire en haut du formulaire d'administration
 * **AppWizard**: Ajout d'une vérification préalable sur les droits d'écriture dans le dossier ``local/applications``
 
+.. versionadded:: Chiba 2.3.1
+
+* **UI**: En cas d'insertion lors d'un processus de sélection, le nouvel item est automatiquement sélectionné (media, page)
+
+
 .. _release/chiba.2/deprecated:
 
 Dépréciés
