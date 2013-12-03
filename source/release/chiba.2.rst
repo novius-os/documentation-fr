@@ -124,6 +124,9 @@ Améliorations
 
 * **UI**: En cas d'insertion lors d'un processus de sélection, le nouvel item est automatiquement sélectionné (media, page)
 
+.. versionadded:: Chiba 2.3.2
+
+* **Sécurité**: Correction d'une faille XSS dans le profiler
 
 .. _release/chiba.2/deprecated:
 
