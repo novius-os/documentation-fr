@@ -14,7 +14,7 @@ Dans le cas d'une application, il faut copier le fichier dans :file:`local/confi
 :file:`local/views/apps/{{application}}/`.
 
 Pour étendre un fichier du moteur de Novius OS, on utilisera :file:`local/config/apps/novius-os/` et
-:file:`local/views/apps/novius-os/`.
+:file:`local/views/novius-os/`.
 
 La syntaxe « générique » est donc :file:`local/{{section}}/{{application}}/` avec :
 
