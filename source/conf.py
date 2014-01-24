@@ -11,10 +11,11 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys, os, subprocess
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
 	tags.add('rtd')
+	subprocess.check_call(['git', 'submodule', 'update', '--init'], cwd='..')
 else:
 	tags.add('not_rtd')
 
@@ -109,7 +110,8 @@ html_theme_options = {
 	"commonbar_switch_url" : "http://docs.novius-os.org"
 }
 
-html_theme_path = ['_theme']
+import sphinx_rtd_theme
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), '_theme']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -175,6 +177,7 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'NoviusOSdoc'
+
 
 # -- Options for LaTeX output --------------------------------------------------
 
