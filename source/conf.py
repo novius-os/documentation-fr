@@ -104,13 +104,11 @@ html_theme = 'noviusos'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-	"sidebarwidth": 300,
 	"commonbar_lang" : "fr",
 	"commonbar_switch" : "en",
 	"commonbar_switch_url" : "http://docs.novius-os.org"
 }
 
-# Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['_theme']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
