@@ -105,14 +105,13 @@ html_theme = 'noviusos'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-	"sidebarwidth": 300,
 	"commonbar_lang" : "fr",
 	"commonbar_switch" : "en",
 	"commonbar_switch_url" : "http://docs.novius-os.org"
 }
 
-# Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['_theme']
+import sphinx_rtd_theme
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), '_theme']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -178,6 +177,7 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'NoviusOSdoc'
+
 
 # -- Options for LaTeX output --------------------------------------------------
 
