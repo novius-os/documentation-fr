@@ -21,7 +21,7 @@ Changer l'environnement en mode production
 
 La première étape est de changer l'environnement Fuel (enregistré sous `Fuel::$env`). Cela adaptera automatiquement
 quelques paramètres tels que la durée de vie du cache ou le niveau des logs. Le
-`site de FuelPHP <http://fuelphp.com/docs/general/environments.html#/env_apache>`_ explique comment changer cet
+`site de FuelPHP <http://fuelphp.com/docs/general/environments.html#/env_apache>`__ explique comment changer cet
 environnement.
 
 Vous pouvez le faire en changeant le valeur de `SetEnv` dans la configuration d'Apache.
@@ -38,11 +38,11 @@ Configuration de connection à la base de données
 Vous devez ajouter la clé `production` dans le fichier de configuration `local/config/db.config.php`. La configuration
 peut être assez similaire que celle de la clé `development`; si vous avez installé votre instance directement sur le
 serveur de production, vous n'avez juste qu'à renommer la clé `development` en `production`. Le
-`site de FuelPHP <http://fuelphp.com/docs/classes/database/introduction.html>`_ documente très bien comment configurer
+`site de FuelPHP <http://fuelphp.com/docs/classes/database/introduction.html>`__ documente très bien comment configurer
 l'accès à votre base de données.
 
 Modifier les durées de vie du cache
-****************************
+***********************************
 
 La durée de vie du cache est adaptée si l'environnement est en production. Vous pouvez néanmoins la changer en
 modifiant le fichier `local/config/config.php`.
@@ -65,4 +65,4 @@ Configuration des emails
 
 Si vous avez besoin que votre instance Novius OS puisse envoyer des emails, vous devez renommer votre fichier
 `local/config/email.config.php.sample` en `local/config/email.config.php`. Les détails de configuration sont très bien
-expliqués dans le `site de FuelPHP <http://fuelphp.com/docs/packages/email/introduction.html>`_.
+expliqués dans le `site de FuelPHP <http://fuelphp.com/docs/packages/email/introduction.html>`__.
