@@ -81,7 +81,7 @@ Vous pouvez donner les droits d'écriture avec votre logiciel FTP. Par exemple, 
 ``chmod a+w`` veut dire donner les droits d'écriture à tous les utilisateurs.
 
 Installation de GD sur Ubuntu
-******************************
+*****************************
 
 Symptômes
 ---------
@@ -96,6 +96,23 @@ Solution
 
     sudo apt-get install php5-gd
     sudo apt-get install libgd2-xpm-dev*
+
+L'extension Json n'est pas installée
+************************************
+
+Symptômes
+---------
+
+* Vous avez un message disant ``Call to undefined function json_encode()`` ou ``Call to undefined function json_decode()``
+
+Certaines distributions ont enlevé l'extension standard JSON à partir de la version 5.5rc2 de PHP à cause d'un conflit de licence.
+
+Solution
+--------
+
+.. code-block:: bash
+
+    sudo apt-get install php5-json
 
 Forbidden quand vous accédez au back-office
 *******************************************
@@ -124,7 +141,7 @@ Par :
     Options +FollowSymlinks -SymlinksIfOwnerMatch -Indexes
 
 
-magic_quotes_gpc mus be off
+magic_quotes_gpc must be off
 ****************************
 
 Symptômes

@@ -5,7 +5,7 @@ Mécanismes d'extensions
 Créer un fichier dans :file:`local`
 ***********************************
 
-On peut modifier n'importe quel fichier de vue ou de configuration via le dossier :file:`local`.
+On peut modifier n'importe quel fichier de vue, de configuration ou de langue via le dossier :file:`local`.
 
 Ceci est possible grâce au comportement des fichiers chargés « en cascade » existant dans FuelPHP et adapté dans Novius
 OS. C'est très simple à faire, car il suffit de copier un fichier existant et de le modifier à notre guise !
@@ -75,7 +75,9 @@ L'application 2 définit qu'elle étend ``mon_application`` via son fichier :fil
     return array(
         'name' => 'Application 2',
         // On définit que c'est une application d'extension
-        'extends' => 'mon_application',
+        'extends' => array(
+            'my_application',
+        );
     );
 
 
@@ -83,7 +85,6 @@ Une fois ``application_2`` installée, elle sera chargée en même temps que ``m
 
 
 Lorsqu'une application étend une autre, certains comportements deviennent automatiques.
-
 
 **Exemple :**
 
@@ -98,3 +99,4 @@ Si dans ``application_2``, le fichier correspondant :file:`applications/applicat
 C'est-à-dire que dans ``Mon\Application\Controller_Test``, la variable ``$config`` contiendra la fusion 2 fichiers (celui de l'application étendue ``mon_application``, et aussi celui de ``application_2`` qui étend la première).
 
 
+.. seealso:: :ref:`Mécanisme d'extension dans le Metadata<api:php/configuration/metadata/extends>`.
