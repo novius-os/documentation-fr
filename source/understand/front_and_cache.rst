@@ -113,7 +113,7 @@ Pour cela, il suffit d'utiliser la méthode ``addCacheSuffixHandler()`` du :ref:
 
     <?php
 
-    \Nos\Nos::main_controller->addCacheSuffixHandler(array(
+    \Nos\Nos::main_controller()->addCacheSuffixHandler(array(
         array(
             'type' => 'GET',
             'keys' => array('my_param'),
@@ -122,7 +122,7 @@ Pour cela, il suffit d'utiliser la méthode ``addCacheSuffixHandler()`` du :ref:
 
     // ou
 
-    \Nos\Nos::main_controller->addCacheSuffixHandler(array(
+    \Nos\Nos::main_controller()->addCacheSuffixHandler(array(
         array(
             'type' => 'callable',
             'callable' => array('MyClasse', 'myMethod'),
