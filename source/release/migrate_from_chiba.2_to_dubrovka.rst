@@ -1,5 +1,5 @@
-Guide de migration de la version Chiba 2 à la version D
-#######################################################
+Guide de migration de la version Chiba 2 à la version Dubrovka
+##############################################################
 
 Mettre à jour son Novius OS et ses applications
 ***********************************************
