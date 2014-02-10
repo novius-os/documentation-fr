@@ -17,7 +17,7 @@ Ruptures de compatibilité
 FuelPHP de la 1.6 à la 1.7.1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jetez un oeil à ces trois changelog de ​​FuelPHP pour les notes de compatibilité ascendante :
+Jetez un oeil à ces trois changelog de ​​FuelPHP pour lesnotes de compatibilité ascendante :
 
 * `FuelPHP 1.6.1 <https://github.com/fuel/fuel/blob/f5c031a32e2e205eec573121d8417360cef4d609/CHANGELOG.md>`__
 * `FuelPHP 1.7 <https://github.com/fuel/fuel/blob/1c4e81b3941c833a8dcf0e6565d4bbe68dc65f03/CHANGELOG.md>`__
