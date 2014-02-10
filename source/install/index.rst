@@ -3,9 +3,9 @@ Installer Novius OS
 
 .. toctree::
 
-	install
-	setup_wizard
+    install
+    setup_wizard
     common_problems
-	whats_next/index
-	upgrade
-	post_install_optimisations
+    whats_next/index
+    upgrade
+    post_install_optimisations
