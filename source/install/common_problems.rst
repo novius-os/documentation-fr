@@ -159,3 +159,23 @@ Ajoutez cette ligne au fichier :file:`.htaccess` :
 
     SetEnv MAGIC_QUOTES 0
 
+404 à l'installation
+****************************
+
+Symptômes
+---------
+
+* Vous avec un ``404`` après la première page d'installation
+* Vous êtes sur un hébergement mutualisé ``1&1``
+
+Solution
+--------
+
+Ajoutez un ``RewriteBase`` dans le fichier :file:`.htaccess` :
+
+.. code-block:: apache
+    :emphasize-lines: 3
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine   on
+        RewriteBase     /novius-os-install-dir/
