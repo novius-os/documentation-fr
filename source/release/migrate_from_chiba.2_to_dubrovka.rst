@@ -186,3 +186,13 @@ Emplacement déprécié : :file:`local/applications/application_a/config/exemple
 
 Le déplacer vers : :file:`local/applications/application_a/config/apps/application_b/exemple.config.php`
 
+
+.. _release/migrate_from_chiba.2_to_d/wysiwyg_theme:
+
+WYSIWYG theme
+^^^^^^^^^^^^^
+
+L'utilisation du theme ``advanced`` est déprécié, utiliser exclusivement le thème ``nos``.
+
+Le thème ``nos`` est maintenant une extension du thème ``advanced``.
+Toutes les clés de configuration commençant par ``theme_nos_`` sont dépréciées et doivent être remplacées par leur équivalent commençant par ``theme_advanced_``.
