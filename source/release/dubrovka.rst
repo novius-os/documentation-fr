@@ -54,6 +54,24 @@ Améliorations
 * **Blog/News**: Le ``page_title`` et le ``title`` des ``meta`` sont modifiés pour les listes de billets de catégorie, tag et auteur
 * **Comments**: Le contexte du commentaire peut être passé par les paramètres dans l'API
 
+.. versionadded:: 4.1
+
+* **Front Controller**:
+    * Nouvelles méthodes ``setItemDisplayed()`` et ``getItemDisplayed()``.
+    * ``setItemDisplayed()`` définit automatiquement ``title``, ``h1``, ``meta_description`` et ``meta_keywords``.
+    * ``setItemDisplayed()`` déclenche l'événement ``front.setItemDisplayed``.
+    * Nouvelle méthode ``setH1()``.
+    * Le sméthodes ``setTitle()``, ``setH1()``, ``setMetaDescription()``, ``setMetaKeywords()`` prennent un template comme second paramètre (un template par défaut peut être définit par configuration). La propriété de la page est disponible par un ``placeholder``.
+    * La méthode ``addJavascriptInline()`` détecte l'utiliation du tag ``<script>``.
+* **Appdesk**:
+    * Le rendu de la barre de recherche a été amélioré.
+    * Nouvelle clé de configuration possible ``multiContextHide`` pour les inspecteurs
+    * Amélioration des performance par un refactoring du javascript : utilisation de ``wijsplitter`` que s'il y en a besoin.
+    * Amélioration du processus de redimensionnement.
+* **Relation Twinnable_ManyMany**: Amélioration de la méthode ``join()``. Ajout de la condition ``main_context``.
+* **Behaviour Twinnable**: amélioration des performance de la sauvegarde en évitant de sauver les ``twins`` s'il n'y en a pas besoin.
+* **Behaviour sortable**: Ajout de la clé de config ``sort_twins``, sa valeur par défaut est ``true``.
+
 Dépréciés
 ---------
 
