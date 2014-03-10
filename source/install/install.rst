@@ -91,10 +91,10 @@ Les commandes suivantes sont données à titre d'exemple si vous voulez installe
 
 .. code-block:: bash
 
-	sudo nano /etc/apache2/sites-available/novius-os
+	sudo nano /etc/apache2/sites-available/novius-os.conf
 
 | Remplacez :command:`nano` par n'importe quel autre éditeur de texte.
-| Remplacez :file:`novius-os` par le nom que vous voulez donner à votre ``Virtual Host``.
+| Remplacez :file:`novius-os.conf` par le nom que vous voulez donner à votre ``Virtual Host``.
 
 | Copiez la configuration suivante dans le fichier que vous venez d'ouvrir et sauvegardez.
 | Adaptez la ligne ``ServerName`` avec votre nom de domaine dans le cas d'une installation en production.
@@ -117,7 +117,7 @@ Activez votre nouveau ``VirtualHost`` :
 
 .. code-block:: bash
 
-	sudo a2ensite novius-os
+	sudo a2ensite novius-os.conf
 
 Relancez ensuite :program:`Apache` pour appliquer la nouvelle configuration.
 
