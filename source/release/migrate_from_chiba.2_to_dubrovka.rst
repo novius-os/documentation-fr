@@ -12,7 +12,7 @@ Modification de vos développements
 Ruptures de compatibilité
 -------------------------
 
-.. _release/migrate_from_chiba.2_to_d/fuelphp:
+.. _release/migrate_from_chiba.2_to_dubrovka/fuelphp:
 
 FuelPHP de la 1.6 à la 1.7.1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -23,14 +23,14 @@ Jetez un oeil à ces trois changelog de ​​FuelPHP pour lesnotes de compatibi
 * `FuelPHP 1.7 <https://github.com/fuel/fuel/blob/1c4e81b3941c833a8dcf0e6565d4bbe68dc65f03/CHANGELOG.md>`__
 * `FuelPHP 1.7.1 <https://github.com/fuel/fuel/blob/8bdfa36e2173ed2afeb28455760cf4bfe68f96ff/CHANGELOG.md>`__
 
-.. _release/migrate_from_chiba.2_to_d/wijmo:
+.. _release/migrate_from_chiba.2_to_dubrovka/wijmo:
 
 Wijmo de la 2013v1.4 à la 2013v3.20
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Jetez un oeil aux notes de version de Wijmo entre 2013v3.20 et 2013v1.4: http://wijmo.com/wiki/index.php/Version_Histories
 
-.. _release/migrate_from_chiba.2_to_d/migrations.enabled_types.metadata:
+.. _release/migrate_from_chiba.2_to_dubrovka/migrations.enabled_types.metadata:
 
 Fin de support pour la clé de key migrations.enabled_types.metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -47,7 +47,7 @@ Dépréciés
 
 Une mise en conformité n'est pas obligatoire mais souhaitable pour pouvoir migrer sans soucis lors de prochaine version.
 
-.. _release/migrate_from_chiba.2_to_d/i18n_crud_config:
+.. _release/migrate_from_chiba.2_to_dubrovka/i18n_crud_config:
 
 Des clés i18n de la config du CRUD pour les formes plurielles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +71,7 @@ Ces clés ne sont plus utiles :
 * ``1 item``
 
 
-.. _release/migrate_from_chiba.2_to_d/hmvc:
+.. _release/migrate_from_chiba.2_to_dubrovka/hmvc:
 
 L'API de Nos::hmvc() est simplifiée
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,7 +94,7 @@ Code déprécié :
 
     \Nos::hmvc('request/url/', array($first_parameter, $second_parameter));
 
-.. _release/migrate_from_chiba.2_to_d/loadConfiguration:
+.. _release/migrate_from_chiba.2_to_dubrovka/loadConfiguration:
 
 Méthode \Config::loadConfiguration()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -119,7 +119,7 @@ Code déprécié :
 
     $config = \Config::load('application_name::file_name', true);
 
-.. _release/migrate_from_chiba.2_to_d/applicationRequiredFromMetadata:
+.. _release/migrate_from_chiba.2_to_dubrovka/applicationRequiredFromMetadata:
 
 La portée publique de \Nos\Application::applicationRequiredFromMetadata()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -135,7 +135,7 @@ Vous pouvez avoir la liste des dépendances des applications en chargeant le fic
 
     $dependencies = \Nos\Config_Data::get('app_dependencies', array());
 
-.. _release/migrate_from_chiba.2_to_d/extends.application:
+.. _release/migrate_from_chiba.2_to_dubrovka/extends.application:
 
 Dans les fichiers metadata, la clé ``extends.application``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -173,7 +173,7 @@ Code déprécié :
         ),
     );
 
-.. _release/migrate_from_chiba.2_to_d/extends.apps:
+.. _release/migrate_from_chiba.2_to_dubrovka/extends.apps:
 
 Les fichiers de config étendus par une application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -187,7 +187,7 @@ Emplacement déprécié : :file:`local/applications/application_a/config/exemple
 Le déplacer vers : :file:`local/applications/application_a/config/apps/application_b/exemple.config.php`
 
 
-.. _release/migrate_from_chiba.2_to_d/wysiwyg_theme:
+.. _release/migrate_from_chiba.2_to_dubrovka/wysiwyg_theme:
 
 WYSIWYG theme
 ^^^^^^^^^^^^^
