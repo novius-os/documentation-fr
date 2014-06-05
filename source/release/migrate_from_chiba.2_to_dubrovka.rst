@@ -42,6 +42,31 @@ Durant les migrations, tous les fichiers de :file:`local/metadata` sont supposé
 Un nouveau événement :ref:`migrate.exception <api:php/events/migrate.exception>` est déclenché si une migration génère une exception.
 Cet évenement peut arrêter la propagation de l'exception.
 
+Nom de l'évènement pour étendre un fichier metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ce code ne fait plus rien dans Dubrovka :
+
+.. code-block:: php
+
+    <?php
+
+    \Event::register_function('config|an_application::metadata', function (&$config) {
+        //...
+    });
+
+Vous devez faire :
+
+.. code-block:: php
+
+    <?php
+
+    \Event::register_function('config|!an_application::metadata', function (&$config) {
+        //...
+    });
+
+Ajouter un ``!`` au début du chemin du fichier metadata.
+
 Dépréciés
 ---------
 
