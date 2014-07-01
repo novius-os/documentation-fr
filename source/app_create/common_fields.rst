@@ -33,29 +33,5 @@ Exemple
 Média et WYSIWYG commun
 ***********************
 
-Pour définir un média ou un WYSIWYG commun à tous les contextes pour un model, il suffit de le déclarer au niveau du modèle.
-
-:shared_medias_context: Tableau des médias communs.
-:shared_wysiwygs_context: Tableau des WYSIWYGs communs.
-
-Les médias et WYSIWYGs communs sont accessibles comme les médias et WYSIWYGs classiques par les accesseurs ``medias`` et ``wysiwygs`` du modèle.
-
-.. seealso:: :ref:`Les accesseurs de Model <api:php/models/model/accessors>`.
-
-Exemple
-*******
-
-.. code-block:: php
-
-    <?php
-    class Model_Monkey extends \Nos\Orm\Model
-    {
-        // ...
-
-        public static $shared_medias_context = array(
-            'thumbnail',
-        );
-
-        public static $shared_wysiwygs_context = array(
-        );
-    }
+Pour définir un média ou un WYSIWYG commun à tous les contextes pour un model, il suffit d'utiliser
+les :ref:`providers <api:php/behaviours/twinnable/providers>` ``shared_wysiwygs_context`` et ``shared_medias_context`` ajoutés par le comportement ``Twinnable``.
