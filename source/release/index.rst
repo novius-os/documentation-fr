@@ -11,3 +11,5 @@ Notes de versions
 	migrate_from_chiba.1_to_chiba.2
 	dubrovka
 	migrate_from_chiba.2_to_dubrovka
+    elche
+    migrate_from_dubrovka_to_elche

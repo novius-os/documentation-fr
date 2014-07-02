@@ -1,15 +1,17 @@
 Créer un gabarit
 ################
 
-
-
 1. Définition dans le fichier :file:`metadata`
 ==============================================
 
 Les metadata d'un template sont décrites dans la :ref:`documentation d'API <api:metadata/templates>`.
 
+2. Configuration de déclinaison de gabarit
+==========================================
 
-2. Création du fichier de vue
+Vous pouvez optionnellement définir une :ref:`configuration de déclinaison de gabarit <api:php/configuration/template_variation>` si votre gabarit est paramétrable par contexte.
+
+3. Création du fichier de vue
 =============================
 
 L'emplacement du fichier dépend de la clé ``file`` configurée dans le fichier :file:`metadata.config.php`.
@@ -19,6 +21,7 @@ L'emplacement du fichier dépend de la clé ``file`` configurée dans le fichier
 :$wysiwyg: Un tableau contenant en clé le nom du WYSIWYG configuré dans le fichier :file:`metadata.config.php`
   		   et en valeur le contenu saisi dans le back-office.
 :$page: L'instance du ``Nos\model_Page`` courant.
+:$title: Le titre à mettre dans un tag ``h1``
 :$main_controller: L'instance du :ref:`contrôleur s'occupant du front-office <api:php/classes/controller_front>`.
 
 .. code-block:: html
