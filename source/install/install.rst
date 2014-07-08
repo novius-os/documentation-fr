@@ -53,7 +53,7 @@ Ouvrez un terminal et saisissez :
 .. code-block:: bash
 
     cd /var/www
-    sudo wget http://raw.github.com/novius-os/ci/master/dubrovka/tools/install.sh && sh install.sh
+    sudo wget http://raw.github.com/novius-os/ci/master/elche/tools/install.sh && sh install.sh
 
 À la question :guilabel:`« Enter the directory name where you want to install Novius OS (default novius-os) »`,
 indiquez le nom du répertoire dans lequel vous voulez installer votre instance de Novius OS.
@@ -74,7 +74,7 @@ Installation via Zip
 
 Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé :
 
-* Téléchargez  `novius-os.4.3-dubrovka.zip <http://nova.li/nov4-3>`__.
+* Téléchargez  `novius-os.5.0-elche.zip <http://community.novius-os.org/download-novius-os-zip.html>`__.
 * Dézippez le fichier.
 * Uploadez (ou déplacer) le répertoire :file:`novius-os` dans le ``DOCUMENT_ROOT`` de votre serveur (par exemple via FTP).
 * Ouvrez votre navigateur à l'URL :file:`http://votredomaine/novius-os/` (remplacez :file:`novius-os` par le nom du répertoire où vous avez dézippé Novius OS).

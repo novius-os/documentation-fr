@@ -12,7 +12,7 @@ Si vous avez installé Novius OS avec :program:`Git`, placez-vous dans le réper
 .. code-block:: bash
 
 	git fetch origin
-	git checkout master/dubrovka
+	git checkout master/elche
 	git submodule update --recursive --init
 
 .. note::
@@ -94,4 +94,4 @@ Si vous n'avez pas accès à :program:`SSH`, vous pouvez faire la migration via 
 Mettre à jour vos développement
 *******************************
 
-Si vous avez des développements personnels, suivez la procédure le :doc:`/release/migrate_from_chiba.2_to_dubrovka`.
+Si vous avez des développements personnels, suivez la procédure le :doc:`/release/migrate_from_dubrovka_to_elche`.
