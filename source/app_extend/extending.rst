@@ -86,17 +86,29 @@ Une fois ``application_2`` installée, elle sera chargée en même temps que ``m
 
 Lorsqu'une application étend une autre, certains comportements deviennent automatiques.
 
+.. seealso:: :ref:`Mécanisme d'extension dans le Metadata<api:php/configuration/metadata/extends>`.
+
 **Exemple :**
 
 ``application_2`` étend ``mon_application``.
 
-Les fichiers de configurations des ``Controller`` et des ``Model`` de ``mon_application`` peuvent être automatiquement étendus par ``application_2`` en les créant au même endroit.
+Configuration
+=============
+
+Les fichiers de configurations des ``Controller`` et des ``Model`` de ``mon_application`` peuvent être automatiquement étendus par ``application_2``.
 
 Exemple, ``mon_application`` définit le fichier de configuration suivant pour ``Controller_Test`` : :file:`applications/mon_application/config/controller/test.config.php`
 
-Si dans ``application_2``, le fichier correspondant :file:`applications/application_2/config/controller/test.config.php` existe, alors il sera fusionné.
+Si dans ``application_2``, le fichier correspondant :file:`applications/application_2/config/apps/mon_application/controller/test.config.php` existe, alors il sera fusionné.
 
 C'est-à-dire que dans ``Mon\Application\Controller_Test``, la variable ``$config`` contiendra la fusion 2 fichiers (celui de l'application étendue ``mon_application``, et aussi celui de ``application_2`` qui étend la première).
 
+Vues
+====
 
-.. seealso:: :ref:`Mécanisme d'extension dans le Metadata<api:php/configuration/metadata/extends>`.
+Les fichiers de vues de ``mon_application`` peuvent être remplacés par ``application_2``.
+
+Exemple, ``mon_application`` a une vue :file:`views/admin/help.view.php`
+
+Si dans ``application_2``, le fichier correspondant :file:`applications/application_2/views/apps/mon_application/admin/help.view.php` existe, il sera utilisé à la place de celui de ``mon_application``.
+
