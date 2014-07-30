@@ -46,3 +46,11 @@ Dépréciés
 ---------
 
 * :ref:`release/migrate_from_dubrovka_to_elche/nos_methods`
+
+.. versionadded:: 5.0.1
+
+Nouveautés
+============
+
+* Traduction japonnaise.
+* **ORM**: Les relations twinnable permettent maintenant de définir un contexte au lieu d'utiliser celui du model courant. Cela permet d'utiliser le contexte courant du front office à la place pour récupérer le plus de model traduit possible.
