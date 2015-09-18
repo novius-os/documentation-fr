@@ -46,6 +46,11 @@ server {
     try_files /public/$uri =404;
   }
 
+  # Data files
+  location /data/ {
+    try_files /public/$uri =404;
+  }
+
   # Front
   location / {
     error_page 404 /public/htdocs/novius-os/404.php;
